@@ -1,0 +1,93 @@
+<!-- To convert the given entity-relationship (ER) model to a relational diagram, the following steps are taken: 
+
+1. Identify Entities and Attributes
+From the ER diagram provided, identify the entities, their attributes, and any relationships between them. -->
+
+Hotel
+
+Attributes: HotelID (pk), Name
+
+Room
+
+Attributes: RoomID (PK), floor
+Category:
+Attributes: CategoryID (PK), Name, price, Beds_numbers(fk)
+
+Type: 
+Attributes: Type i.d, Name
+
+Employee:
+Attributes: EmployeeID (PK), EmployeenameID (pK), Employee-Specialty (FK)
+
+2. Convert Entities to Tables
+For each entity, create a table with columns corresponding to the entity's attributes:
+
+Hotel Table
+
+HotelID (Primary Key)
+Name
+
+Room Table
+
+RoomID (Primary Key)
+floor 
+
+Type Table
+
+Type_id (primary key)
+Type_name (foreign key)
+
+Category Table
+CategoryID (Primary Key)
+categoryName 
+price
+Beds numbers(fk)
+
+Employee Table
+
+EmployeeID (Primary Key)
+Employee_name (Foreign Key)
+Employee specialty
+
+3. Define Relationships and Foreign Keys
+Identify how tables relate to each other through foreign keys:
+
+Room Table has a foreign key HotelID that references Hotel Table.
+CategoryTable has foreign keys CategoryID and RoomID that reference Room Table and hotel table respectively.
+4. Design the Relational Diagram
+The relational diagram (also known as the relational schema) includes tables, their attributes, and relationships (foreign keys). Here’s how it will look:
+
+
+
+
+Hotel
+------------------------
+HotelID (PK)
+Name
+
+
+Room
+------------------------
+RoomID (PK)
+HotelID (FK) --> References Hotel(HotelID)
+floor
+
+Category
+------------------------
+CategoryID (PK)
+category Name (fk)
+price
+beds_NUMBERS 
+
+Employee
+------------------------
+EmployeeID (PK)
+Employee_Name (FK) --> References Customer(employeeID)
+Employee_Specialty (FK) --> References ()
+
+
+
+
+
+
+
